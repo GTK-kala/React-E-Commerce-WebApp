@@ -11,7 +11,7 @@ const BestSeller = () => {
 
         useEffect(() =>{
            const Filterd = products.filter((item) =>{
-               if(item.bestSeller === true){
+               if(item.bestseller === true){
                    return item;
                }
            });
