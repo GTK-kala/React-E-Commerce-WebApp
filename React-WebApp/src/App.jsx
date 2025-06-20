@@ -10,14 +10,15 @@ import Cart from "./pages/Cart"
 import Login from "./Pages/Login"
 import PlaceOrder from "./pages/PlaceOrder"
 import Orders from "./pages/Orders"
-import "./App.css" 
 import NavBar from "./Components/NavBar"
+import Footer from "./Components/Footer"
+import "./App.css" 
 
 
 const App = () => {
   return (
     <div className="px-4 sm:px-[5vm] md:-[7vm] lg:[9vm]">
-        <NavBar />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="collection" element={<Collection />} />
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/place-order" element={<PlaceOrder />} />
         <Route path="/orders" element={<Orders />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
