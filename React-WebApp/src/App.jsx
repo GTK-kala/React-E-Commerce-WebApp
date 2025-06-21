@@ -13,12 +13,14 @@ import Orders from "./pages/Orders"
 import NavBar from "./Components/NavBar"
 import Footer from "./Components/Footer"
 import "./App.css" 
+import SearchBar from "./Components/SearchBar"
 
 
 const App = () => {
   return (
     <div className="px-4 sm:px-[5vm] md:-[7vm] lg:[9vm]">
       <NavBar />
+      <SearchBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="collection" element={<Collection />} />
