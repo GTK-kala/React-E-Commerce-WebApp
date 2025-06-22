@@ -10,7 +10,7 @@ const NavBar = () => {
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
-      {/* Logo and Navigation Links */}
+    {/* Logo and Navigation Links */}
         <Link to='/'>
          <img src={assets.logo} className='w-36' alt="Logo-Image" />
         </Link>
@@ -50,7 +50,7 @@ const NavBar = () => {
           </Link>
           <img className='w-4 cursor-pointer sm:hidden' src={assets.menu_icon} alt="Menu-Image" onClick={() => setVisible(true)}/>
         </div> 
-        {/* Sidebar menu for small screens */}
+      {/* Sidebar menu for small screens */}
          <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white  transition-all ${visible ? 'w-full' : 'w-0'} sm:hidden`}>
           <div className='flex flex-col text-gray-700'>
             <div className='flex items-center gap-4 p-3 cursor-pointer' onClick={() => setVisible(false)}>

@@ -71,14 +71,13 @@ const Collection = () => {
   return (
     <>
      <div className="flex flex-col gap-1 pt-10 border-t sm:flex-row sm:gap-10">
-    
-      {/* Filter Options */}
+    {/*---------------------Filter Options----------------------*/}
        <div className="min-w-60">
         <p className="flex items-center gap-2 my-2 text-xl cursor-pointer" onClick={() =>{setShowFilter(!showFilter)}}>
           FILTERS
           <img className={`h-4 sm:hidden ${showFilter ? 'rotate-90' : ' '}`} src={assets.dropdown_icon} alt="DropDown icon" />
         </p>
-      {/* Category Filter */}
+    {/*---------------------Category Filter----------------------*/}
         <div className={`border border-gray-400 pl-5 py-3 mt-6 ${showFilter ? ' ' : 'hidden'} sm:block`}>
           <p className="mb-3 text-sm font-medium">CATEGORIES</p>
           <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
@@ -93,7 +92,7 @@ const Collection = () => {
             </p>
           </div>
         </div>
-        {/* SubCategory Filter */}
+    {/*---------------------SubCategory Filter----------------------*/}
         <div className={`border border-gray-400 pl-5 py-3 mt-5 ${showFilter ? ' ' : 'hidden'} sm:block`}>
           <p className="mb-3 text-sm font-medium">TYPE</p>
           <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
@@ -109,18 +108,18 @@ const Collection = () => {
           </div>
         </div>
        </div>
-       {/* Right Side */}
+    {/*---------------------Right Side----------------------*/}
        <div className="flex-1">
         <div className="flex justify-between mb-4 text-base sm:text-2xl">
            <Title Text={Array}/>
-       {/* Product Sort */}
+    {/*---------------------Product Sort----------------------*/}
           <select onChange={(e) =>{setSortType(e.target.value)}} className="px-1 text-sm border-2 border-l-2 border-gray-300 cursor-pointer">
             <option value="relevent">Sort by: Relevent</option>
             <option value="low-high">Sort by: Low to High</option>
             <option value="high-low">Sort by: High to Low</option>
           </select>
         </div>
-       {/* Map Products */}
+    {/*---------------------Map Products----------------------*/}
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 gap-y-6">
           {
             filterProducts.map((item,i) =>{

@@ -24,7 +24,7 @@ const BestSeller = () => {
             <Title Text={array}/>
             <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ab illum laudantium? Itaque repellendus amet voluptatum, optio veritatis, praesentium ducimus in sint iure aut repudiandae! Corporis a soluta itaque consequatur.</p>
         </div>
-        {/* Rendering Best Products */}
+    {/*---------------------Rendering Best Products----------------------*/}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 grid-y-6">
             {
               bestSeller.map((item,i) =>{
