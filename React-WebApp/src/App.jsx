@@ -14,11 +14,14 @@ import NavBar from "./Components/NavBar"
 import Footer from "./Components/Footer"
 import "./App.css" 
 import SearchBar from "./Components/SearchBar"
+import { ToastContainer , toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const App = () => {
   return (
     <div className="px-4 sm:px-[5vm] md:-[7vm] lg:[9vm]">
+      <ToastContainer />
       <NavBar />
       <SearchBar />
       <Routes>
