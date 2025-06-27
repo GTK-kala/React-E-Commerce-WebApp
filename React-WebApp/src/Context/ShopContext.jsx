@@ -49,11 +49,19 @@ export const ShopContext = createContext();
        }
        return totalCount ;
      }
+
+    const upDateQuantity = async (itemId,size,quantity) =>{
+        let cartData = structuredClone(cartItems);
+        cartData[itemId][size] = quantity;
+
+        setCartItems(cartData);
+    }
+      
        
        const value ={
         products , currency , delvery_fee , 
         search , setSearch , showSearch , 
-        setShowSearch , cartItems , addToCart , getCartCount
+        setShowSearch , cartItems , addToCart , getCartCount , upDateQuantity
      }
      return(
         <ShopContext.Provider value={value}>
