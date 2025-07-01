@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState , useNavigate} from "react";
 import { products } from '../frontend_assets/assets';
 import { toast } from 'react-toastify'
 
@@ -11,7 +11,7 @@ export const ShopContext = createContext();
         const [search , setSearch] = useState();
         const [showSearch , setShowSearch] = useState(false);
         const [cartItems , setCartItems] = useState({});
-
+        const navigate = useNavigate();
       let cartData = structuredClone(cartItems);
         
       const addToCart = async (itemId , size) =>{   
@@ -78,7 +78,7 @@ export const ShopContext = createContext();
         products , currency , delvery_fee , 
         search , setSearch , showSearch , 
         setShowSearch , cartItems , addToCart , 
-        getCartCount , upDateQuantity , getCartAmount
+        getCartCount , upDateQuantity , getCartAmount , navigate
      }
      return(
         <ShopContext.Provider value={value}>
