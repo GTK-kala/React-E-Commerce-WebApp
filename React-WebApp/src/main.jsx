@@ -6,12 +6,12 @@ import App from './App.jsx'
 import ShopContextProvider from './Context/ShopContext.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-     <StrictMode>
+   <StrictMode>
+    <BrowserRouter> 
       <ShopContextProvider>
         <App />
       </ShopContextProvider>
-    </StrictMode>,
-  </BrowserRouter>
+    </BrowserRouter>
+   </StrictMode>
 
 )
